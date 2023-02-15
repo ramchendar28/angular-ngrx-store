@@ -1,0 +1,8 @@
+<ng-container *ngIf="!isLoggedIn; else loggedIn">
+	<h4>Login</h4>
+	<button type="button" (click)="Login()">Login</button>
+</ng-container>
+<ng-template  #loggedIn>
+  Welcome {{username}}
+</ng-template>
+<div *ngIf="isLoading">Loading...</div>
